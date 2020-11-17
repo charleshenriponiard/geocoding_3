@@ -33,5 +33,3 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     data-markers="<%= @markers.to_json %>"
 ></div>
-
-<%= javascript_pack_tag 'mapbox', 'data-turbolinks-track': 'reload', defer: true %>

@@ -1,8 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
-const mapElement = document.getElementById("map");
-
 const addMarkers = (marker, map) => {
   const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
@@ -27,6 +25,7 @@ const fitMapToMarkers = (markers, map) => {
 };
 
 const initMapbox = () => {
+  const mapElement = document.getElementById("map");
   if(mapElement) {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
